@@ -8,7 +8,7 @@ export default styleSheet('SearchField', {
     padding: '0 12px',
     borderRadius: '6px',
     marginRight: 'auto',
-    _flex: ['row', 'flex-start', 'center'],
+    _flex: ['row', 'between', 'center'],
     fontFamily: 'sans-serif',
     transition: '0.25s ease all',
   },
@@ -31,5 +31,6 @@ export default styleSheet('SearchField', {
     _size: ['100%', '45px'],
     _font: ['16px', '19px', '400'],
     border: 'none',
+    paddingRight: '6px',
   },
 });

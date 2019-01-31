@@ -1,39 +1,39 @@
 import React, { Component } from 'react';
 import { SwissProvider } from 'swiss-react';
+import Svg from 'src/components/Svg/Svg';
+import logo from 'src/assets/svgs/combat-sports.svg';
 import SW from './MenuBarOption.swiss';
 
 class MenuBarOption extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    this.state ={ 
+    this.state = {
       selected: false,
-    }
+    };
   }
 
   activeDropdown = () => {
     const { selected } = this.state;
-    this.setState({selected: !selected})
-  }
+    this.setState({ selected: !selected });
+  };
   render() {
     const { selected } = this.state;
-    const { logo, option } = this.props; 
+    const { option } = this.props;
     return (
-      <SwissProvider selected={selected}> 
-        <SW.Wrapper> 
+      <SwissProvider selected={selected}>
+        <SW.Wrapper>
           <SW.Top>
-            <SW.Logo src={logo}/>
-            <SW.Option>
-              {option}
-            </SW.Option>
-            <SW.Dropdown onClick={this.activeDropdown}>{selected ? 'There' : 'Here'}</SW.Dropdown>
+            <Svg icon={logo} size={24} />
+            <SW.Option>{option}</SW.Option>
+            <SW.Dropdown onClick={this.activeDropdown}>
+              {selected ? 'There' : 'Here'}
+            </SW.Dropdown>
           </SW.Top>
-          <SW.ContentWrapper> 
-            ContentWrapper
-          </SW.ContentWrapper>
+          <SW.ContentWrapper>ContentWrapper</SW.ContentWrapper>
         </SW.Wrapper>
       </SwissProvider>
-    )
+    );
   }
 }
 

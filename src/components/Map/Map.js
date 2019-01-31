@@ -14,11 +14,8 @@ export default class Map extends Component {
           defaultZoom={18}
           defaultCenter={{ lat: 34, lng: 34 }}
           yesIWantToUseGoogleMapApiInternals
-          onGoogleApiLoaded={({ map, maps }) =>
-            this.handleApiLoaded(map, maps)
-          }>
-          <div>test</div>
-        </GoogleMapReact>
+          onGoogleApiLoaded={({ map, maps }) => this.handleApiLoaded(map, maps)}
+        />
       </SW.Wrapper>
     );
   }
