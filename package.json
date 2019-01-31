@@ -1,0 +1,9 @@
+{
+  "name": "dojohunt",
+  "description": "Making martial arts searches easy.",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    
+  }
+}
