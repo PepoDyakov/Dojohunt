@@ -1,6 +1,6 @@
 {
   "name": "dojohunt",
-  "description": "Making martial arts searches easy.",
+  "description": "A project which aims to build an easier way for martial artists to research, find, contact and join martial art gyms around the globe. 🌍",
   "version": "0.0.1",
   "private": false,
   "scripts": {
