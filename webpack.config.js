@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    bundle: '.src/index.js'
+    bundle: './src/index.js',
   },
   output: {
     path: path.join(__dirname, 'dist/public'),
@@ -17,28 +17,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'statics/index.html',
       filename: 'index.html',
-    })
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        include: [path.join(__dirname, 'src/client')],
+        include: [path.join(__dirname, 'src/')],
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                "@babel/preset-env",
-                "@babel/preset-react"
-              ],
+              presets: ['@babel/preset-env', '@babel/preset-react'],
               plugins: [
-                "@babel/plugin-proposal-class-properties",
-                "@babel/plugin-transform-arrow-functions"
-              ]
+                '@babel/plugin-proposal-class-properties',
+                '@babel/plugin-transform-arrow-functions',
+              ],
             },
-          }   
+          },
         ],
       },
       {
@@ -48,9 +45,10 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]',
-            }
-          }
-        ]
-      }
-  }
-}
+            },
+          },
+        ],
+      },
+    ],
+  },
+};

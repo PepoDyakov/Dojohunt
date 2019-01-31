@@ -11,8 +11,7 @@
           "."
         ],
         "alias": {
-          "server": "./src/server",
-          "client": "./src/client"
+          "src": "./src"
         }
       }
     ],

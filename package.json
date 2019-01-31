@@ -3,6 +3,11 @@
   "description": "Making martial arts searches easy.",
   "version": "0.0.1",
   "private": false,
+  "scripts": {
+    "clean": "rimraf ./dist && mkdir dist && ncp statics dist/public",
+    "start": "npm run clean && npm-run-all --parallel start:webpack",
+    "start:webpack": "webpack-dev-server --open --progress --watch"
+  },
   "dependencies": {
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
@@ -26,6 +31,7 @@
     "nodemon": "^1.18.7",
     "npm-run-all": "^4.1.5",
     "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
   }
 }
